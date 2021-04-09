@@ -1,2 +1,5 @@
+include ':common'
+include ':base'
+include ':network'
 rootProject.name='GEProject'
 include ':app'
