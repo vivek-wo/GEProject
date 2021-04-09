@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.vivek.wo.geproject.R;
 
-public class HomeFragment extends Fragment {
+public class MainHomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private MainHomeViewModel mainHomeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        mainHomeViewModel =
+                ViewModelProviders.of(this).get(MainHomeViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_main_tab_home, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        mainHomeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

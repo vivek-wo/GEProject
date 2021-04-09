@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    <string name="title_main_tab_home">Home</string>
+    <string name="title_main_tab_look">Look</string>
+    <string name="title_main_tab_mine">Mine</string>
+</resources>

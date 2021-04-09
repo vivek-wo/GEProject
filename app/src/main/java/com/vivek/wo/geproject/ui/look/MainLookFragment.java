@@ -1,4 +1,4 @@
-package com.vivek.wo.geproject.ui.notifications;
+package com.vivek.wo.geproject.ui.look;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.vivek.wo.geproject.R;
 
-public class NotificationsFragment extends Fragment {
+public class MainLookFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private MainLookViewModel mainLookViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        mainLookViewModel =
+                ViewModelProviders.of(this).get(MainLookViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_main_tab_look, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        mainLookViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
